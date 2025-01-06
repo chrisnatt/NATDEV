@@ -1,3 +1,5 @@
+using { ZAPI_BUSINESS_PARTNER } from '../srv/external/ZAPI_BUSINESS_PARTNER.cds'; 
+using { ZVERSION_SRV } from '../srv/external/ZVERSION_SRV.cds'; 
 using { BusinessRole_Read } from '../srv/external/BusinessRole_Read.cds'; 
 namespace NAT_DQM_CheckBP;
 

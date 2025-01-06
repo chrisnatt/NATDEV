@@ -49,7 +49,7 @@
         "checkPort4004"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}//"
       }
     },
     {
@@ -68,7 +68,7 @@
         "npm-install"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}//"
       }
     },
     {
@@ -83,7 +83,7 @@
         "BuildMDK"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}//"
       }
     }
   ]
