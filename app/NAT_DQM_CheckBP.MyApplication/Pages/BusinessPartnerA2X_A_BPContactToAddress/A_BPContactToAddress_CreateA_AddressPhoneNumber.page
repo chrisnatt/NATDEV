@@ -1,0 +1,88 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/A_BPContactToAddress_CreateA_AddressPhoneNumber.js",
+				"Position": "Right",
+				"SystemItem": "Save",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Create_A_AddressPhoneNumber)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "AddressID",
+							"_Name": "AddressID",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Person",
+							"_Name": "Person",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "OrdinalNumber",
+							"_Name": "OrdinalNumber",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DestinationLocationCountry",
+							"_Name": "DestinationLocationCountry",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "IsDefaultPhoneNumber",
+							"Caption": "IsDefaultPhoneNumber",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "PhoneNumber",
+							"_Name": "PhoneNumber",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PhoneNumberExtension",
+							"_Name": "PhoneNumberExtension",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "InternationalPhoneNumber",
+							"_Name": "InternationalPhoneNumber",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PhoneNumberType",
+							"_Name": "PhoneNumberType",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AddressCommunicationRemarkText",
+							"_Name": "AddressCommunicationRemarkText",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BPContactToAddress_CreateA_AddressPhoneNumber"
+}

@@ -13,5 +13,6 @@
         "*.rule": "default",
         "*.properties": "default",
         "*.fragment": "default"
-    }
+    },
+    "breadcrumbs.enabled": false
 }

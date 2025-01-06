@@ -1,55 +1,79 @@
 {
-    "name": "NAT_DQM_CheckBP",
-    "version": "1.0.0",
-    "description": "List and select NH2 BP's to check by DQM (TD-UTIL-DQM)",
-    "repository": "<Add your repository here>",
-    "license": "UNLICENSED",
-    "private": true,
-    "dependencies": {
-        "@cap-js/hana": "^1",
-        "@sap-cloud-sdk/http-client": "^3.24.0",
-        "@sap-cloud-sdk/util": "^3.24.0",
-        "@sap/cds": "^8",
-        "@sap/low-code-event-handler": "^1.2.4",
-        "@sap/xsenv": ">=3.3.2 <3.3.3",
-        "@sap/xssec": "^4.2.7",
-        "express": "^4",
-        "hdb": "^0.19.11",
-        "passport": "^0.7.0",
-        "@sap/mdk-tools": "^1.3.1"
+  "name": "NAT_DQM_CheckBP",
+  "version": "1.0.0",
+  "description": "List and select NH2 BP's to check by DQM (TD-UTIL-DQM)",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap-cloud-sdk/http-client": "^3.24.0",
+    "@sap-cloud-sdk/util": "^3.24.0",
+    "@sap/cds": "^8",
+    "@sap/low-code-event-handler": "^1.2.4",
+    "@sap/xsenv": ">=3.3.2 <3.3.3",
+    "@sap/xssec": "^4.2.7",
+    "express": "^4",
+    "hdb": "^0.19.11",
+    "passport": "^0.7.0",
+    "@sap/mdk-tools": "^1.3.1"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.7.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/dev-cap-tools": "^1.31.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "start-local": "npm run generate-entry-point && npm run cds-watch",
+    "generate-entry-point": "dev-cap-tools gen-entrypoint",
+    "cds-watch": "cds watch --open"
+  },
+  "cds": {
+    "sql": {
+      "native_hana_associations": false
     },
-    "devDependencies": {
-        "@cap-js/cds-types": "^0.7.0",
-        "@cap-js/sqlite": "^1",
-        "@sap/dev-cap-tools": "^1.31.0"
-    },
-    "scripts": {
-        "start": "cds-serve",
-        "start-local": "npm run generate-entry-point && npm run cds-watch",
-        "generate-entry-point": "dev-cap-tools gen-entrypoint",
-        "cds-watch": "cds watch --open"
-    },
-    "cds": {
-        "sql": {
-            "native_hana_associations": false
+    "requires": {
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "app-service": {
+        "impl": "@sap/low-code-event-handler"
+      },
+      "auth": {
+        "[development]": {
+          "kind": "dummy"
         },
-        "requires": {
-            "[production]": {
-                "db": "hana",
-                "auth": "xsuaa"
-            },
-            "app-service": {
-                "impl": "@sap/low-code-event-handler"
-            },
-            "auth": {
-                "[development]": {
-                    "kind": "dummy"
-                },
-                "[production]": {
-                    "kind": "xsuaa"
-                }
-            }
+        "[production]": {
+          "kind": "xsuaa"
         }
-    },
-    "lcap": true
+      },
+      "BusinessPartnerA2X": {
+        "kind": "odata-v2",
+        "model": "srv/external/BusinessPartnerA2X",
+        "[production]": {
+          "credentials": {
+            "destination": "apihub_sandbox",
+            "path": "s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+          }
+        },
+        "csrf": true,
+        "csrfInBatch": true
+      },
+      "BusinessRole_Read": {
+        "kind": "odata",
+        "model": "srv/external/BusinessRole_Read",
+        "[production]": {
+          "credentials": {
+            "destination": "apihub_sandbox",
+            "path": "s4hanacloud/sap/opu/odata4/sap/aps_iam_api_brole_read/srvd_a2x/sap/businessrole/0001"
+          }
+        },
+        "csrf": true,
+        "csrfInBatch": true
+      }
+    }
+  },
+  "lcap": true
 }

@@ -1,0 +1,112 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_AddressPhoneNumber",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressPhoneNumber/NavToA_AddressPhoneNumber_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressPhoneNumber/A_AddressPhoneNumber_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,A_AddressPhoneNumber_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{AddressID}",
+						"Subhead": "{Person}",
+						"BodyText": "",
+						"Footnote": "{DestinationLocationCountry}",
+						"Description": "{OrdinalNumber}",
+						"StatusText": "{IsDefaultPhoneNumber}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{PhoneNumber}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Person",
+							"Value": "{Person}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "OrdinalNumber",
+							"Value": "{OrdinalNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DestinationLocationCountry",
+							"Value": "{DestinationLocationCountry}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "IsDefaultPhoneNumber",
+							"Value": "{IsDefaultPhoneNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PhoneNumber",
+							"Value": "{PhoneNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PhoneNumberExtension",
+							"Value": "{PhoneNumberExtension}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "InternationalPhoneNumber",
+							"Value": "{InternationalPhoneNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PhoneNumberType",
+							"Value": "{PhoneNumberType}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressCommunicationRemarkText",
+							"Value": "{AddressCommunicationRemarkText}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_AddressPhoneNumber_Detail"
+}

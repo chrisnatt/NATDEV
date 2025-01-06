@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "A_AddressHomePageURL",
+        "Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "AddressID": "#Control:AddressID/#Value",
+        "Person": "#Control:Person/#Value",
+        "OrdinalNumber": "#Control:OrdinalNumber/#Value",
+        "ValidityStartDate": "#Control:ValidityStartDate/#Value",
+        "IsDefaultURLAddress": "#Control:IsDefaultURLAddress/#Value",
+        "SearchURLAddress": "#Control:SearchURLAddress/#Value",
+        "AddressCommunicationRemarkText": "#Control:AddressCommunicationRemarkText/#Value",
+        "URLFieldLength": "#Control:URLFieldLength/#Value",
+        "WebsiteURL": "#Control:WebsiteURL/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/MyApplication/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/MyApplication/Actions/UpdateEntityFailureMessage.action"
+}

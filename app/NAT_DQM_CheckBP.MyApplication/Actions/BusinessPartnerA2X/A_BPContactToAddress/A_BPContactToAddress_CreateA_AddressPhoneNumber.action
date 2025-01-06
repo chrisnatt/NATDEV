@@ -1,0 +1,31 @@
+{
+    "ParentLink": {
+        "Property": "to_PhoneNumber",
+        "Target": {
+            "EntitySet": "A_BPContactToAddress",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/MyApplication/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/MyApplication/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "AddressID": "#Control:AddressID/#Value",
+        "Person": "#Control:Person/#Value",
+        "OrdinalNumber": "#Control:OrdinalNumber/#Value",
+        "DestinationLocationCountry": "#Control:DestinationLocationCountry/#Value",
+        "IsDefaultPhoneNumber": "#Control:IsDefaultPhoneNumber/#Value",
+        "PhoneNumber": "#Control:PhoneNumber/#Value",
+        "PhoneNumberExtension": "#Control:PhoneNumberExtension/#Value",
+        "InternationalPhoneNumber": "#Control:InternationalPhoneNumber/#Value",
+        "PhoneNumberType": "#Control:PhoneNumberType/#Value",
+        "AddressCommunicationRemarkText": "#Control:AddressCommunicationRemarkText/#Value"
+    },
+    "Target": {
+        "EntitySet": "A_AddressPhoneNumber",
+        "Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

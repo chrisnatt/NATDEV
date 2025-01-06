@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="BusinessRoleRestrictionValuesType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="RestrictionTypeAssignmentUUID"/>
+                    <PropertyRef Name="FieldName"/>
+                    <PropertyRef Name="RestrictionValueAssignmentUUID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="RestrictionTypeAssignmentUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="FieldName" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="RestrictionValueAssignmentUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="LowValue" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="HighValue" Type="Edm.String" Nullable="false" MaxLength="40"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleRestrictionFieldsType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="RestrictionTypeAssignmentUUID"/>
+                    <PropertyRef Name="FieldName"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="RestrictionTypeAssignmentUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="FieldName" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="MaintainStatus" Type="Edm.String" Nullable="false" MaxLength="13"/>
+                <Property Name="IsLeading" Type="Edm.Boolean" Nullable="false"/>
+                <NavigationProperty Name="RestrictionValues" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionValuesType)"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleBusinessCatalogsType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="BusinessCatalogID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="BusinessCatalogID" Type="Edm.String" Nullable="false" MaxLength="35"/>
+            </EntityType>
+            <EntityType Name="BusinessRolesType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="LongText" Type="Edm.String" Nullable="false" MaxLength="1024"/>
+                <Property Name="BusinessRoleTemplateID" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="IsLeading" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="LeadingBusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="IsDerived" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="BusinessRoleGroup" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="InheritSpacesInDerivedRole" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="ExposedToSAPBTP" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="PriceCategoryCode" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="PriceCategory" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="WriteAccessRestrictionCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="ReadAccessRestrictionCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="F4AccessRestrictionCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="Imported" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Exported" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="LastChangedDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedByUserID" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangedByUserName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="LastChangedByUserDescription" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="LastChangedByEMailAddress" Type="Edm.String" Nullable="false" MaxLength="241"/>
+                <Property Name="LastChangedByGlobalUserID" Type="Edm.String" Nullable="false" MaxLength="36"/>
+                <NavigationProperty Name="BusinessCatalogs" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleBusinessCatalogsType)"/>
+                <NavigationProperty Name="BusinessUsers" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleBusinessUsersType)"/>
+                <NavigationProperty Name="DerivedBusinessRoles" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleDerivedRolesType)"/>
+                <NavigationProperty Name="LaunchpadSpaces" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleLaunchpadSpacesType)"/>
+                <NavigationProperty Name="Restrictions" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionsType)"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleBusinessUsersType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="UserID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="UserID" Type="Edm.String" Nullable="false" MaxLength="12"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleLaunchpadSpacesType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="SpaceID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="SpaceID" Type="Edm.String" Nullable="false" MaxLength="35"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleRestrictionsType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="RestrictionTypeAssignmentUUID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="RestrictionTypeAssignmentUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="AccessCategory" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="RestrictionType" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <NavigationProperty Name="RestrictionFields" Type="Collection(com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionFieldsType)"/>
+            </EntityType>
+            <EntityType Name="BusinessRoleDerivedRolesType">
+                <Key>
+                    <PropertyRef Name="BusinessRoleID"/>
+                    <PropertyRef Name="DerivedBusinessRoleID"/>
+                </Key>
+                <Property Name="BusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="DerivedBusinessRoleID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="BusinessRoleBusinessCatalogs" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleBusinessCatalogsType"/>
+                <EntitySet Name="BusinessRoleBusinessUsers" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleBusinessUsersType"/>
+                <EntitySet Name="BusinessRoleDerivedRoles" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleDerivedRolesType"/>
+                <EntitySet Name="BusinessRoleLaunchpadSpaces" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleLaunchpadSpacesType"/>
+                <EntitySet Name="BusinessRoleRestrictionFields" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionFieldsType">
+                    <NavigationPropertyBinding Path="RestrictionValues" Target="BusinessRoleRestrictionValues"/>
+                </EntitySet>
+                <EntitySet Name="BusinessRoleRestrictions" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionsType">
+                    <NavigationPropertyBinding Path="RestrictionFields" Target="BusinessRoleRestrictionFields"/>
+                </EntitySet>
+                <EntitySet Name="BusinessRoleRestrictionValues" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRoleRestrictionValuesType"/>
+                <EntitySet Name="BusinessRoles" EntityType="com.sap.gateway.srvd_a2x.aps_iam_api_brole_read.v0001.BusinessRolesType">
+                    <NavigationPropertyBinding Path="BusinessCatalogs" Target="BusinessRoleBusinessCatalogs"/>
+                    <NavigationPropertyBinding Path="BusinessUsers" Target="BusinessRoleBusinessUsers"/>
+                    <NavigationPropertyBinding Path="DerivedBusinessRoles" Target="BusinessRoleDerivedRoles"/>
+                    <NavigationPropertyBinding Path="LaunchpadSpaces" Target="BusinessRoleLaunchpadSpaces"/>
+                    <NavigationPropertyBinding Path="Restrictions" Target="BusinessRoleRestrictions"/>
+                </EntitySet>
+            </EntityContainer>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/RestrictionTypeAssignmentUUID">
+                <Annotation Term="SAP__common.Label" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.Heading" String="Unique universal identifier"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/FieldName">
+                <Annotation Term="SAP__common.Label" String="Restriction Field Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Field Name"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Restriction Field"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/RestrictionValueAssignmentUUID">
+                <Annotation Term="SAP__common.Label" String="Restriction Value Assignment UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Value Assignment UUID"/>
+                <Annotation Term="SAP__common.Heading" String="Unique universal identifier"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/LowValue">
+                <Annotation Term="SAP__common.Label" String="Low Value"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Low Restriction Value"/>
+                <Annotation Term="SAP__common.Heading" String="Authorization value"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType/HighValue">
+                <Annotation Term="SAP__common.Label" String="High Value"/>
+                <Annotation Term="SAP__common.QuickInfo" String="High Restriction Value"/>
+                <Annotation Term="SAP__common.Heading" String="Authorization value"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionValuesType">
+                <Annotation Term="SAP__common.Label" String="Restriction Values"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleRestrictionValues">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType/RestrictionTypeAssignmentUUID">
+                <Annotation Term="SAP__common.Label" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.Heading" String="Unique universal identifier"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType/FieldName">
+                <Annotation Term="SAP__common.Label" String="Restriction Field Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Field Name"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Restriction Field"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType/MaintainStatus">
+                <Annotation Term="SAP__common.Label" String="Maintain Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Maintain Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType/IsLeading">
+                <Annotation Term="SAP__common.Label" String="Is Leading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Is Leading Restriction"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionFieldsType">
+                <Annotation Term="SAP__common.Label" String="Restriction Fields"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleRestrictionFields">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>RestrictionValues</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessCatalogsType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessCatalogsType/BusinessCatalogID">
+                <Annotation Term="SAP__common.Label" String="Business Catalog ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Catalog ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Catalog ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessCatalogsType">
+                <Annotation Term="SAP__common.Label" String="Business Catalogs"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleBusinessCatalogs">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/Description">
+                <Annotation Term="SAP__common.Label" String="Business Role Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role Description"/>
+                <Annotation Term="SAP__common.Heading" String="Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LongText">
+                <Annotation Term="SAP__common.Label" String="Business Role Long Text"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role Long Text"/>
+                <Annotation Term="SAP__common.Heading" String="Long Text"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/BusinessRoleTemplateID">
+                <Annotation Term="SAP__common.Label" String="Business Role Template ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role Template ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role Template ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/IsLeading">
+                <Annotation Term="SAP__common.Label" String="Is Leading"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Is Leading Business Role"/>
+                <Annotation Term="SAP__common.Heading" String="Master Business Role"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LeadingBusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Leading Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Leading Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/IsDerived">
+                <Annotation Term="SAP__common.Label" String="Is Derived"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Is Derived Business Role"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/BusinessRoleGroup">
+                <Annotation Term="SAP__common.Label" String="Business Role Group"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role Group"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Role Group"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/InheritSpacesInDerivedRole">
+                <Annotation Term="SAP__common.Label" String="Inherit Spaces in Derived Business Roles"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Inherit Spaces in Derived Business Roles"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/ExposedToSAPBTP">
+                <Annotation Term="SAP__common.Label" String="Exposed to SAP BTP"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Exposed to SAP Business Technology Platform"/>
+                <Annotation Term="SAP__common.Heading" String="CFLP Exposure"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/PriceCategoryCode">
+                <Annotation Term="SAP__common.Label" String="Price Category Code"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Price Category Code"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/PriceCategory">
+                <Annotation Term="SAP__common.Label" String="Price Category"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Price Category"/>
+                <Annotation Term="SAP__common.Heading" String="Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/WriteAccessRestrictionCode">
+                <Annotation Term="SAP__common.Label" String="Write Access Restriction Code"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Write Access Restriction Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/ReadAccessRestrictionCode">
+                <Annotation Term="SAP__common.Label" String="Read Access Restriction Code"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Read Access Restriction Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/F4AccessRestrictionCode">
+                <Annotation Term="SAP__common.Label" String="F4 Access Restriction Code"/>
+                <Annotation Term="SAP__common.QuickInfo" String="F4 Access Restriction Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/Imported">
+                <Annotation Term="SAP__common.Label" String="Imported"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Imported Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/Exported">
+                <Annotation Term="SAP__common.Label" String="Exported"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Exported Status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedDateTime">
+                <Annotation Term="SAP__common.Label" String="Last Changed DateTime"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed DateTime"/>
+                <Annotation Term="SAP__common.Heading" String="Time Stamp"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedByUserID">
+                <Annotation Term="SAP__common.Label" String="Last Changed By User ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed by User ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedByUserName">
+                <Annotation Term="SAP__common.Label" String="Last Changed By User Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed by User Name"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="User ID alias"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedByUserDescription">
+                <Annotation Term="SAP__common.Label" String="Last Changed By User Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed by User Description"/>
+                <Annotation Term="SAP__common.Heading" String="Description of the Technical User Account"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedByEMailAddress">
+                <Annotation Term="SAP__common.Label" String="Last Changed By EMail"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed by EMail Address"/>
+                <Annotation Term="SAP__common.Heading" String="Email Address"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType/LastChangedByGlobalUserID">
+                <Annotation Term="SAP__common.Label" String="Last Changed By GlobalUserID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed by GlobalUserID"/>
+                <Annotation Term="SAP__common.Heading" String="Global User ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRolesType">
+                <Annotation Term="SAP__common.Label" String="Business Roles"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoles">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="Filterable" Bool="true"/>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="LongText"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>LongText</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>BusinessCatalogs</PropertyPath>
+                                <PropertyPath>BusinessUsers</PropertyPath>
+                                <PropertyPath>DerivedBusinessRoles</PropertyPath>
+                                <PropertyPath>LaunchpadSpaces</PropertyPath>
+                                <PropertyPath>Restrictions</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessUsersType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessUsersType/UserID">
+                <Annotation Term="SAP__common.Label" String="Business User ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business User ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleBusinessUsersType">
+                <Annotation Term="SAP__common.Label" String="Business Users"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleBusinessUsers">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleLaunchpadSpacesType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleLaunchpadSpacesType/SpaceID">
+                <Annotation Term="SAP__common.Label" String="Fiori Space ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Fiori Space ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Space ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleLaunchpadSpacesType">
+                <Annotation Term="SAP__common.Label" String="Launchpad Spaces"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleLaunchpadSpaces">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionsType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionsType/RestrictionTypeAssignmentUUID">
+                <Annotation Term="SAP__common.Label" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Type Assignment UUID"/>
+                <Annotation Term="SAP__common.Heading" String="Unique universal identifier"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionsType/AccessCategory">
+                <Annotation Term="SAP__common.Label" String="Access Category"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Access Category"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Access Category Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionsType/RestrictionType">
+                <Annotation Term="SAP__common.Label" String="Restriction Type"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Restriction Type"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Restriction Type ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleRestrictionsType">
+                <Annotation Term="SAP__common.Label" String="Restrictions"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleRestrictions">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>RestrictionFields</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleDerivedRolesType/BusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleDerivedRolesType/DerivedBusinessRoleID">
+                <Annotation Term="SAP__common.Label" String="Derived Business Role ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Derived Business Role ID"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Business Role ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.BusinessRoleDerivedRolesType">
+                <Annotation Term="SAP__common.Label" String="Derived Business Roles"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/BusinessRoleDerivedRoles">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,348 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_BPContactToAddress",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/A_BPContactToAddress_Cancel.js",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/A_BPContactToAddress_UpdateEntity.js",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_A_BPContactToAddress_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "RelationshipNumber",
+							"_Name": "RelationshipNumber",
+							"Value": "{RelationshipNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "BusinessPartnerCompany",
+							"_Name": "BusinessPartnerCompany",
+							"Value": "{BusinessPartnerCompany}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "BusinessPartnerPerson",
+							"_Name": "BusinessPartnerPerson",
+							"Value": "{BusinessPartnerPerson}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Mode": "Date",
+							"_Name": "ValidityEndDate",
+							"Value": "{ValidityEndDate}",
+							"Caption": "ValidityEndDate",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "AddressID",
+							"_Name": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "AddressNumber",
+							"_Name": "AddressNumber",
+							"Value": "{AddressNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AdditionalStreetPrefixName",
+							"_Name": "AdditionalStreetPrefixName",
+							"Value": "{AdditionalStreetPrefixName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AdditionalStreetSuffixName",
+							"_Name": "AdditionalStreetSuffixName",
+							"Value": "{AdditionalStreetSuffixName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AddressTimeZone",
+							"_Name": "AddressTimeZone",
+							"Value": "{AddressTimeZone}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CareOfName",
+							"_Name": "CareOfName",
+							"Value": "{CareOfName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CityCode",
+							"_Name": "CityCode",
+							"Value": "{CityCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CityName",
+							"_Name": "CityName",
+							"Value": "{CityName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CompanyPostalCode",
+							"_Name": "CompanyPostalCode",
+							"Value": "{CompanyPostalCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Country",
+							"_Name": "Country",
+							"Value": "{Country}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "County",
+							"_Name": "County",
+							"Value": "{County}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DeliveryServiceNumber",
+							"_Name": "DeliveryServiceNumber",
+							"Value": "{DeliveryServiceNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "DeliveryServiceTypeCode",
+							"_Name": "DeliveryServiceTypeCode",
+							"Value": "{DeliveryServiceTypeCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "District",
+							"_Name": "District",
+							"Value": "{District}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "FormOfAddress",
+							"_Name": "FormOfAddress",
+							"Value": "{FormOfAddress}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "FullName",
+							"_Name": "FullName",
+							"Value": "{FullName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "HomeCityName",
+							"_Name": "HomeCityName",
+							"Value": "{HomeCityName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "HouseNumber",
+							"_Name": "HouseNumber",
+							"Value": "{HouseNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "HouseNumberSupplementText",
+							"_Name": "HouseNumberSupplementText",
+							"Value": "{HouseNumberSupplementText}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Language",
+							"_Name": "Language",
+							"Value": "{Language}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POBox",
+							"_Name": "POBox",
+							"Value": "{POBox}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POBoxDeviatingCityName",
+							"_Name": "POBoxDeviatingCityName",
+							"Value": "{POBoxDeviatingCityName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POBoxDeviatingCountry",
+							"_Name": "POBoxDeviatingCountry",
+							"Value": "{POBoxDeviatingCountry}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POBoxDeviatingRegion",
+							"_Name": "POBoxDeviatingRegion",
+							"Value": "{POBoxDeviatingRegion}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "POBoxIsWithoutNumber",
+							"Caption": "POBoxIsWithoutNumber",
+							"Value": "{POBoxIsWithoutNumber}",
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "POBoxLobbyName",
+							"_Name": "POBoxLobbyName",
+							"Value": "{POBoxLobbyName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "POBoxPostalCode",
+							"_Name": "POBoxPostalCode",
+							"Value": "{POBoxPostalCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Person",
+							"_Name": "Person",
+							"Value": "{Person}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PostalCode",
+							"_Name": "PostalCode",
+							"Value": "{PostalCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PrfrdCommMediumType",
+							"_Name": "PrfrdCommMediumType",
+							"Value": "{PrfrdCommMediumType}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Region",
+							"_Name": "Region",
+							"Value": "{Region}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "StreetName",
+							"_Name": "StreetName",
+							"Value": "{StreetName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "StreetPrefixName",
+							"_Name": "StreetPrefixName",
+							"Value": "{StreetPrefixName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "StreetSuffixName",
+							"_Name": "StreetSuffixName",
+							"Value": "{StreetSuffixName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "TaxJurisdiction",
+							"_Name": "TaxJurisdiction",
+							"Value": "{TaxJurisdiction}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "TransportZone",
+							"_Name": "TransportZone",
+							"Value": "{TransportZone}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AddressRepresentationCode",
+							"_Name": "AddressRepresentationCode",
+							"Value": "{AddressRepresentationCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ContactPersonBuilding",
+							"_Name": "ContactPersonBuilding",
+							"Value": "{ContactPersonBuilding}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ContactPersonPrfrdCommMedium",
+							"_Name": "ContactPersonPrfrdCommMedium",
+							"Value": "{ContactPersonPrfrdCommMedium}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ContactRelationshipDepartment",
+							"_Name": "ContactRelationshipDepartment",
+							"Value": "{ContactRelationshipDepartment}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ContactRelationshipFunction",
+							"_Name": "ContactRelationshipFunction",
+							"Value": "{ContactRelationshipFunction}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "CorrespondenceShortName",
+							"_Name": "CorrespondenceShortName",
+							"Value": "{CorrespondenceShortName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Floor",
+							"_Name": "Floor",
+							"Value": "{Floor}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "InhouseMail",
+							"_Name": "InhouseMail",
+							"Value": "{InhouseMail}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "IsDefaultAddress",
+							"Caption": "IsDefaultAddress",
+							"Value": "{IsDefaultAddress}",
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "RoomNumber",
+							"_Name": "RoomNumber",
+							"Value": "{RoomNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BPContactToAddress_Edit"
+}

@@ -1,0 +1,498 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_BPContactToAddress",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_BPContactToAddress/A_BPContactToAddress_DetailPopover.action",
+				"Position": "Right",
+				"Caption": "More",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,A_BPContactToAddress_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{AdditionalStreetPrefixName}",
+						"Subhead": "{RelationshipNumber}",
+						"BodyText": "",
+						"Footnote": "{BusinessPartnerPerson}",
+						"Description": "{BusinessPartnerCompany}",
+						"StatusText": "{ValidityEndDate}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{AddressID}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "RelationshipNumber",
+							"Value": "{RelationshipNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "BusinessPartnerCompany",
+							"Value": "{BusinessPartnerCompany}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "BusinessPartnerPerson",
+							"Value": "{BusinessPartnerPerson}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ValidityEndDate",
+							"Value": "{ValidityEndDate}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressNumber",
+							"Value": "{AddressNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AdditionalStreetPrefixName",
+							"Value": "{AdditionalStreetPrefixName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AdditionalStreetSuffixName",
+							"Value": "{AdditionalStreetSuffixName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressTimeZone",
+							"Value": "{AddressTimeZone}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CareOfName",
+							"Value": "{CareOfName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CityCode",
+							"Value": "{CityCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CityName",
+							"Value": "{CityName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CompanyPostalCode",
+							"Value": "{CompanyPostalCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Country",
+							"Value": "{Country}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "County",
+							"Value": "{County}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DeliveryServiceNumber",
+							"Value": "{DeliveryServiceNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "DeliveryServiceTypeCode",
+							"Value": "{DeliveryServiceTypeCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "District",
+							"Value": "{District}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "FormOfAddress",
+							"Value": "{FormOfAddress}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "FullName",
+							"Value": "{FullName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "HomeCityName",
+							"Value": "{HomeCityName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "HouseNumber",
+							"Value": "{HouseNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "HouseNumberSupplementText",
+							"Value": "{HouseNumberSupplementText}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Language",
+							"Value": "{Language}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBox",
+							"Value": "{POBox}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxDeviatingCityName",
+							"Value": "{POBoxDeviatingCityName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxDeviatingCountry",
+							"Value": "{POBoxDeviatingCountry}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxDeviatingRegion",
+							"Value": "{POBoxDeviatingRegion}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxIsWithoutNumber",
+							"Value": "{POBoxIsWithoutNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxLobbyName",
+							"Value": "{POBoxLobbyName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "POBoxPostalCode",
+							"Value": "{POBoxPostalCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Person",
+							"Value": "{Person}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PostalCode",
+							"Value": "{PostalCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "PrfrdCommMediumType",
+							"Value": "{PrfrdCommMediumType}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Region",
+							"Value": "{Region}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "StreetName",
+							"Value": "{StreetName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "StreetPrefixName",
+							"Value": "{StreetPrefixName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "StreetSuffixName",
+							"Value": "{StreetSuffixName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "TaxJurisdiction",
+							"Value": "{TaxJurisdiction}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "TransportZone",
+							"Value": "{TransportZone}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressRepresentationCode",
+							"Value": "{AddressRepresentationCode}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ContactPersonBuilding",
+							"Value": "{ContactPersonBuilding}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ContactPersonPrfrdCommMedium",
+							"Value": "{ContactPersonPrfrdCommMedium}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ContactRelationshipDepartment",
+							"Value": "{ContactRelationshipDepartment}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ContactRelationshipFunction",
+							"Value": "{ContactRelationshipFunction}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "CorrespondenceShortName",
+							"Value": "{CorrespondenceShortName}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Floor",
+							"Value": "{Floor}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "InhouseMail",
+							"Value": "{InhouseMail}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "IsDefaultAddress",
+							"Value": "{IsDefaultAddress}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "RoomNumber",
+							"Value": "{RoomNumber}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "to_EmailAddress",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{OrdinalNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{AddressID}",
+						"Footnote": "{IsDefaultEmailAddress}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{EmailAddress}",
+						"Subhead": "{Person}",
+						"SubstatusText": "{SearchEmailAddress}",
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_AddressEmailAddress/NavToA_AddressEmailAddress_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/to_EmailAddress",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_FaxNumber",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{OrdinalNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{AddressID}",
+						"Footnote": "{IsDefaultFaxNumber}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{FaxCountry}",
+						"Subhead": "{Person}",
+						"SubstatusText": "{FaxNumber}",
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_AddressFaxNumber/NavToA_AddressFaxNumber_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/to_FaxNumber",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_MobilePhoneNumber",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{OrdinalNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{AddressID}",
+						"Footnote": "{DestinationLocationCountry}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{IsDefaultPhoneNumber}",
+						"Subhead": "{Person}",
+						"SubstatusText": "{PhoneNumber}",
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_AddressPhoneNumber/NavToA_AddressPhoneNumber_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/to_MobilePhoneNumber",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_PhoneNumber",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{OrdinalNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{AddressID}",
+						"Footnote": "{DestinationLocationCountry}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{IsDefaultPhoneNumber}",
+						"Subhead": "{Person}",
+						"SubstatusText": "{PhoneNumber}",
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_AddressPhoneNumber/NavToA_AddressPhoneNumber_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/to_PhoneNumber",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_URLAddress",
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{OrdinalNumber}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{AddressID}",
+						"Footnote": "{ValidityStartDate}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{IsDefaultURLAddress}",
+						"Subhead": "{Person}",
+						"SubstatusText": "{SearchURLAddress}",
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_AddressHomePageURL/NavToA_AddressHomePageURL_Detail.action",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Target": {
+						"EntitySet": "{@odata.readLink}/to_URLAddress",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"A_AddressEmailAddress",
+				"A_AddressFaxNumber",
+				"A_AddressPhoneNumber",
+				"A_AddressPhoneNumber",
+				"A_AddressHomePageURL"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BPContactToAddress_Detail"
+}

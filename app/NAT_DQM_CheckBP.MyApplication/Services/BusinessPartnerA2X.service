@@ -1,0 +1,10 @@
+{
+    "DestinationName": "../odata/v4/business-partner-a2-x/",
+    "OfflineEnabled": false,
+    "LanguageURLParam": "",
+    "OnlineOptions": {},
+    "OfflineOptions": {},
+    "PathSuffix": "",
+    "SourceType": "Cloud",
+    "ServiceUrl":""
+}

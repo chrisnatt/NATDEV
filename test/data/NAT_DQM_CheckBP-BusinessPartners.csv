@@ -1,0 +1,6 @@
+ID;businessPartnersID;name;type;status;country
+fe0e8bde-84fa-486e-860e-e8453ba92d47;BP001;Alpha Corp;Supplier;Active;USA
+8e3440b6-067c-46d7-9571-59d05c2a3677;BP002;Beta LLC;Distributor;Inactive;Canada
+48db6dc8-76f3-4e84-85d5-3f4f8a4723ba;BP003;Gamma Inc;Manufacturer;Active;UK
+d2e34545-5ed6-4a0b-90dc-2e23af9d9a3b;BP004;Delta Co;Retailer;Active;Australia
+22bc2d66-921d-4ba4-a772-9a8e65b121a0;BP005;Epsilon GmbH;Supplier;Inactive;Germany

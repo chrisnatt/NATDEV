@@ -1,0 +1,9 @@
+{
+    "Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "OnFailure": "/MyApplication/Actions/BusinessPartnerA2X/Service/InitializeOnlineFailureMessage.action",
+    "ActionResult": {
+        "_Name": "init"
+    }
+}

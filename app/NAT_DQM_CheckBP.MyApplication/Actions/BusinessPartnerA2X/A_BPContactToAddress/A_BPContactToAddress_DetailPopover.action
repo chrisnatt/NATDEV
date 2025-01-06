@@ -1,0 +1,28 @@
+{
+    "PopoverItems": [{
+            "Title": "Add A_AddressEmailAddress",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_CreateA_AddressEmailAddress.js"
+        },
+        {
+            "Title": "Add A_AddressFaxNumber",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_CreateA_AddressFaxNumber.js"
+        },
+        {
+            "Title": "Add A_AddressPhoneNumber",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_CreateA_AddressPhoneNumber.js"
+        },
+        {
+            "Title": "Add A_AddressPhoneNumber",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_CreateA_AddressPhoneNumber.js"
+        },
+        {
+            "Title": "Add A_AddressHomePageURL",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_CreateA_AddressHomePageURL.js"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_BPContactToAddress/A_BPContactToAddress_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

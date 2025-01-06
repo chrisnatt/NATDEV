@@ -1,0 +1,107 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_AddressFaxNumber",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressFaxNumber/NavToA_AddressFaxNumber_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressFaxNumber/A_AddressFaxNumber_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,A_AddressFaxNumber_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{AddressID}",
+						"Subhead": "{Person}",
+						"BodyText": "",
+						"Footnote": "{IsDefaultFaxNumber}",
+						"Description": "{OrdinalNumber}",
+						"StatusText": "{FaxCountry}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{FaxNumber}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Person",
+							"Value": "{Person}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "OrdinalNumber",
+							"Value": "{OrdinalNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "IsDefaultFaxNumber",
+							"Value": "{IsDefaultFaxNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "FaxCountry",
+							"Value": "{FaxCountry}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "FaxNumber",
+							"Value": "{FaxNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "FaxNumberExtension",
+							"Value": "{FaxNumberExtension}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "InternationalFaxNumber",
+							"Value": "{InternationalFaxNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressCommunicationRemarkText",
+							"Value": "{AddressCommunicationRemarkText}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_AddressFaxNumber_Detail"
+}

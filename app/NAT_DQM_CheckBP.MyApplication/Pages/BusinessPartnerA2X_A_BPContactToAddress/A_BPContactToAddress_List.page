@@ -1,0 +1,76 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,A_BPContactToAddress)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{BusinessPartnerCompany}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/MyApplication/Actions/BusinessPartnerA2X/A_BPContactToAddress/NavToA_BPContactToAddress_Detail.action",
+						"StatusImage": "",
+						"Title": "{AdditionalStreetPrefixName}",
+						"Footnote": "{BusinessPartnerPerson}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{ValidityEndDate}",
+						"Subhead": "{RelationshipNumber}",
+						"SubstatusText": "{AddressID}",
+						"_Type": "ObjectTable.Type.ObjectCell"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "A_BPContactToAddress",
+						"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BPContactToAddress_List"
+}

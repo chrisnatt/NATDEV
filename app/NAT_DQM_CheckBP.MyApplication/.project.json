@@ -1,0 +1,54 @@
+{
+    "Credential": "cf",
+    "Template": {
+        "Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+        "Name": "CRUD",
+        "Version": "0.0.1"
+    },
+    "CF": {
+        "Target": "",
+        "Organization": "",
+        "Space": "",
+        "Deploy": {
+            "Description": "MyApplication",
+            "WebClient": {
+                "Runtime": "preview",
+                "URL": ""
+            },
+            "Destination": [{
+                "CF": "NAT_DQM_CheckBP-app-srv",
+                "MDK": "../odata/v4/business-partner-a2-x/",
+                "URL": ""
+            }]
+        }
+    },
+    "MobileService": {
+        "Type": "standard",
+        "AdminAPI": "",
+        "AppId": "lcap.NAT_DQM_CheckBP.NAT_DQM_CheckBP.MyApplication",
+        "Destination": []
+    },
+    "Onboarding": {
+        "Schema": "sapmobilesvcs",
+        "TimeZone": "UTC",
+        "URL": ""
+    },
+    "LCAP": {
+        "FullName": "NAT_DQM_CheckBP.MyApplication",
+        "Service": [{
+            "mdk": "NAT_DQM_CheckBP.MyApplication/Services/BusinessPartnerA2X.service",
+            "cap": {
+                "name": "BusinessPartnerA2X",
+                "sourcePath": "srv/external/BusinessPartnerA2X.cds",
+                "path": "/odata/v4/business-partner-a2-x/",
+                "entryPath": "/odata/v4/business-partner-a2-x",
+                "destination": "NAT_DQM_CheckBP-app-srv",
+                "value": "0"
+            }
+        }],
+        "sourceTemplate": {
+            "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+            "version": "1.40.12"
+        }
+    }
+}

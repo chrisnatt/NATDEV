@@ -1,0 +1,105 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_AddressPhoneNumber",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressPhoneNumber/A_AddressPhoneNumber_Cancel.js",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressPhoneNumber/A_AddressPhoneNumber_UpdateEntity.js",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_A_AddressPhoneNumber_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "AddressID",
+							"_Name": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "Person",
+							"_Name": "Person",
+							"Value": "{Person}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "OrdinalNumber",
+							"_Name": "OrdinalNumber",
+							"Value": "{OrdinalNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "DestinationLocationCountry",
+							"_Name": "DestinationLocationCountry",
+							"Value": "{DestinationLocationCountry}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "IsDefaultPhoneNumber",
+							"Caption": "IsDefaultPhoneNumber",
+							"Value": "{IsDefaultPhoneNumber}",
+							"_Type": "Control.Type.FormCell.Switch"
+						},
+						{
+							"Caption": "PhoneNumber",
+							"_Name": "PhoneNumber",
+							"Value": "{PhoneNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PhoneNumberExtension",
+							"_Name": "PhoneNumberExtension",
+							"Value": "{PhoneNumberExtension}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "InternationalPhoneNumber",
+							"_Name": "InternationalPhoneNumber",
+							"Value": "{InternationalPhoneNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "PhoneNumberType",
+							"_Name": "PhoneNumberType",
+							"Value": "{PhoneNumberType}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AddressCommunicationRemarkText",
+							"_Name": "AddressCommunicationRemarkText",
+							"Value": "{AddressCommunicationRemarkText}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_AddressPhoneNumber_Edit"
+}

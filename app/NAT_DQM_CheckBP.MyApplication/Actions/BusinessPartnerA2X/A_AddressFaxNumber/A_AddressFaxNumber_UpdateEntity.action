@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "A_AddressFaxNumber",
+        "Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "AddressID": "#Control:AddressID/#Value",
+        "Person": "#Control:Person/#Value",
+        "OrdinalNumber": "#Control:OrdinalNumber/#Value",
+        "IsDefaultFaxNumber": "#Control:IsDefaultFaxNumber/#Value",
+        "FaxCountry": "#Control:FaxCountry/#Value",
+        "FaxNumber": "#Control:FaxNumber/#Value",
+        "FaxNumberExtension": "#Control:FaxNumberExtension/#Value",
+        "InternationalFaxNumber": "#Control:InternationalFaxNumber/#Value",
+        "AddressCommunicationRemarkText": "#Control:AddressCommunicationRemarkText/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/MyApplication/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/MyApplication/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/MyApplication/Pages/BusinessPartnerA2X_A_BPContactToAddress/A_BPContactToAddress_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

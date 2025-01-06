@@ -1,0 +1,30 @@
+{
+    "ParentLink": {
+        "Property": "to_URLAddress",
+        "Target": {
+            "EntitySet": "A_BPContactToAddress",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/MyApplication/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/MyApplication/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "AddressID": "#Control:AddressID/#Value",
+        "Person": "#Control:Person/#Value",
+        "OrdinalNumber": "#Control:OrdinalNumber/#Value",
+        "ValidityStartDate": "#Control:ValidityStartDate/#Value",
+        "IsDefaultURLAddress": "#Control:IsDefaultURLAddress/#Value",
+        "SearchURLAddress": "#Control:SearchURLAddress/#Value",
+        "AddressCommunicationRemarkText": "#Control:AddressCommunicationRemarkText/#Value",
+        "URLFieldLength": "#Control:URLFieldLength/#Value",
+        "WebsiteURL": "#Control:WebsiteURL/#Value"
+    },
+    "Target": {
+        "EntitySet": "A_AddressHomePageURL",
+        "Service": "/MyApplication/Services/BusinessPartnerA2X.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

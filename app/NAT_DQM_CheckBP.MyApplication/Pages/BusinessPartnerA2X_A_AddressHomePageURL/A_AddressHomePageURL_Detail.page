@@ -1,0 +1,107 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_AddressHomePageURL",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressHomePageURL/NavToA_AddressHomePageURL_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressHomePageURL/A_AddressHomePageURL_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,A_AddressHomePageURL_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{AddressID}",
+						"Subhead": "{Person}",
+						"BodyText": "",
+						"Footnote": "{ValidityStartDate}",
+						"Description": "{OrdinalNumber}",
+						"StatusText": "{IsDefaultURLAddress}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{SearchURLAddress}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "Person",
+							"Value": "{Person}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "OrdinalNumber",
+							"Value": "{OrdinalNumber}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "ValidityStartDate",
+							"Value": "{ValidityStartDate}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "IsDefaultURLAddress",
+							"Value": "{IsDefaultURLAddress}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "SearchURLAddress",
+							"Value": "{SearchURLAddress}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "AddressCommunicationRemarkText",
+							"Value": "{AddressCommunicationRemarkText}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "URLFieldLength",
+							"Value": "{URLFieldLength}",
+							"_Type": "KeyValue.Type.Item"
+						},
+						{
+							"KeyName": "WebsiteURL",
+							"Value": "{WebsiteURL}",
+							"_Type": "KeyValue.Type.Item"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_AddressHomePageURL_Detail"
+}

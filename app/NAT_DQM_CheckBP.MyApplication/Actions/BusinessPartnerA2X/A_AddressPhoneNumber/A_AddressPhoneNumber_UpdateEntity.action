@@ -1,0 +1,26 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "A_AddressPhoneNumber",
+        "Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "AddressID": "#Control:AddressID/#Value",
+        "Person": "#Control:Person/#Value",
+        "OrdinalNumber": "#Control:OrdinalNumber/#Value",
+        "DestinationLocationCountry": "#Control:DestinationLocationCountry/#Value",
+        "IsDefaultPhoneNumber": "#Control:IsDefaultPhoneNumber/#Value",
+        "PhoneNumber": "#Control:PhoneNumber/#Value",
+        "PhoneNumberExtension": "#Control:PhoneNumberExtension/#Value",
+        "InternationalPhoneNumber": "#Control:InternationalPhoneNumber/#Value",
+        "PhoneNumberType": "#Control:PhoneNumberType/#Value",
+        "AddressCommunicationRemarkText": "#Control:AddressCommunicationRemarkText/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/MyApplication/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/MyApplication/Actions/UpdateEntityFailureMessage.action"
+}

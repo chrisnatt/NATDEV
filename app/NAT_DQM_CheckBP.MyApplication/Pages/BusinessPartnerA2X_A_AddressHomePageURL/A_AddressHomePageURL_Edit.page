@@ -1,0 +1,103 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MyApplication/Services/BusinessPartnerA2X.service",
+		"EntitySet": "A_AddressHomePageURL",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressHomePageURL/A_AddressHomePageURL_Cancel.js",
+				"_Type": "Control.Type.ActionBarItem"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MyApplication/Rules/BusinessPartnerA2X/A_AddressHomePageURL/A_AddressHomePageURL_UpdateEntity.js",
+				"_Type": "Control.Type.ActionBarItem"
+			}
+		],
+		"Caption": "$(L,Update_A_AddressHomePageURL_Detail)",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "AddressID",
+							"_Name": "AddressID",
+							"Value": "{AddressID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "Person",
+							"_Name": "Person",
+							"Value": "{Person}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "OrdinalNumber",
+							"_Name": "OrdinalNumber",
+							"Value": "{OrdinalNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Mode": "Date",
+							"_Name": "ValidityStartDate",
+							"Value": "{ValidityStartDate}",
+							"Caption": "ValidityStartDate",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"IsEditable": false
+						},
+						{
+							"_Name": "IsDefaultURLAddress",
+							"Caption": "IsDefaultURLAddress",
+							"Value": "{IsDefaultURLAddress}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"IsEditable": false
+						},
+						{
+							"Caption": "SearchURLAddress",
+							"_Name": "SearchURLAddress",
+							"Value": "{SearchURLAddress}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "AddressCommunicationRemarkText",
+							"_Name": "AddressCommunicationRemarkText",
+							"Value": "{AddressCommunicationRemarkText}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "URLFieldLength",
+							"_Name": "URLFieldLength",
+							"Value": "{URLFieldLength}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "WebsiteURL",
+							"_Name": "WebsiteURL",
+							"Value": "{WebsiteURL}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_AddressHomePageURL_Edit"
+}
